@@ -82,6 +82,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
 		bool Drinking = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		bool Prone = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		bool Dead = false;
+
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
 
