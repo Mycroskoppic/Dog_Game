@@ -63,24 +63,28 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
 
+
+
 public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		float Hunger = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		float Thirst = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		float Health = 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		float Stamina = 1;
+
 private:
 
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
-		float Hunger = 100;
 
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
-		float Thirst = 100;
-
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
-		float Health = 100;
-
-	UPROPERTY(EditDefaultsOnly, Category = Setup)
-		float Stamina = 100;
 };
 
