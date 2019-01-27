@@ -88,6 +88,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
 		bool Dead = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Setup)
+		bool Barking = false;
+
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
 
